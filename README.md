@@ -1,79 +1,47 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+1. Cài Đặt Môi Trường
 
-# Getting Started
+Trước khi bắt đầu, bạn cần cài đặt môi trường phát triển React Native. Hãy làm theo hướng dẫn trên trang chủ của React Native: React Native Getting Started.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Các bước cài đặt cơ bản:
 
-## Step 1: Start the Metro Server
+Cài đặt Node.js: Tải và cài đặt Node.js từ nodejs.org.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+Cài đặt React Native CLI: Chạy lệnh sau trong terminal để cài đặt React Native CLI.
+npm install -g react-native-cli
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Cài đặt Android Studio để chạy ứng dụng trên thiết bị Android.
 
-```bash
-# using npm
-npm start
+2. Khởi Tạo Dự Án
 
-# OR using Yarn
-yarn start
-```
+Sau khi môi trường đã được cài đặt, tạo một dự án mới bằng cách sử dụng lệnh sau:
+npx @react-native-community/cli init BaiTap01
 
-## Step 2: Start your Application
+3. Cài Đặt Các Thư Viện
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Để sử dụng React Navigation cho việc điều hướng giữa các màn hình, cài đặt các thư viện cần thiết:
 
-### For Android
+npm install @react-navigation/native @react-navigation/stack react-native-screens react-native-safe-area-context
+npm install react-native-gesture-handler react-native-reanimated
 
-```bash
-# using npm
-npm run android
+4. Cấu Hình Điều Hướng (Navigation)
 
-# OR using Yarn
-yarn android
-```
+Tạo thư mục navigation trong src và tạo file AppNavigator.js để cấu hình các màn hình trong ứng dụng.
+![alt text](image.png)
 
-### For iOS
+5. Tạo Các Màn Hình và Thành Phần
 
-```bash
-# using npm
-npm run ios
+a. Màn Hình Giới Thiệu Bản Thân (IntroScreen)
+Tạo thư mục screens trong src và thêm file IntroScreen.js. Trang này sẽ hiển thị thông tin giới thiệu bản thân và tự động chuyển sang trang tiếp theo sau 10 giây.
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+b. Màn Hình Homepage
+Tạo file Homepage.js trong thư mục screens và components để hiển thị nội dung chính và nút quay lại trang giới thiệu.
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+6. Chạy Ứng Dụng
+Sau khi hoàn thành các bước trên, bạn có thể chạy ứng dụng bằng cách sử dụng lệnh sau:
+Android: npx react-native run-android
 
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Ứng dụng sẽ hiển thị màn hình "IntroScreen" trong 10 giây và tự động chuyển sang trang "Homepage". Bạn cũng có thể quay lại màn hình giới thiệu từ trang "Homepage".
