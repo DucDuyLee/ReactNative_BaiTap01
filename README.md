@@ -40,8 +40,8 @@ Tạo file Homepage.js trong thư mục screens và components để hiển th�
 ![alt text](image-4.png)
 ![alt text](image-5.png)
 ![alt text](image-6.png)
+
 6. Chạy Ứng Dụng
-Sau khi hoàn thành các bước trên, bạn có thể chạy ứng dụng bằng cách sử dụng lệnh sau:
 Android: npx react-native run-android
 
-Ứng dụng sẽ hiển thị màn hình "IntroScreen" trong 10 giây và tự động chuyển sang trang "Homepage". Bạn cũng có thể quay lại màn hình giới thiệu từ trang "Homepage".
+Ứng dụng sẽ hiển thị màn hình "IntroScreen" trong 10 giây và tự động chuyển sang trang "Homepage". Có thể quay lại màn hình giới thiệu từ trang "Homepage".
